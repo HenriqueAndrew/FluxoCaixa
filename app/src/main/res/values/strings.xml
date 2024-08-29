@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FluxoCaixa</string>
+    <string name="valor">Valor</string>
+    <string name="salvar">Salvar</string>
+    <string name="excluir">Excluir</string>
+    <string name="saldo">Saldo</string>
+</resources>

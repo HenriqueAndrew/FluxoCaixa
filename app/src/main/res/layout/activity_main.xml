@@ -1,0 +1,95 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btLancar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Novo Lançamento"
+        app:layout_constraintEnd_toEndOf="@+id/fl_VerSaldo"
+        app:layout_constraintStart_toStartOf="@+id/fl_VerSaldo"
+        app:layout_constraintTop_toBottomOf="@+id/fl_VerSaldo" />
+
+    <Button
+        android:id="@+id/btLancamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Consultar Lançamentos"
+        app:layout_constraintEnd_toEndOf="@+id/btLancar"
+        app:layout_constraintStart_toStartOf="@+id/btLancar"
+        app:layout_constraintTop_toBottomOf="@+id/btLancar" />
+
+    <FrameLayout
+        android:id="@+id/fl_VerSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivIconeApp"
+        app:layout_constraintStart_toStartOf="@+id/ivIconeApp"
+        app:layout_constraintTop_toBottomOf="@+id/ivIconeApp">
+
+        <ImageButton
+            android:id="@+id/btSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/saldo"
+            android:tooltipText="Ver Saldo"
+            app:layout_constraintEnd_toEndOf="@+id/ivIconeApp"
+            app:layout_constraintStart_toStartOf="@+id/ivIconeApp"
+            app:layout_constraintTop_toBottomOf="@+id/ivIconeApp"
+            app:srcCompat="@drawable/ic_ver_saldo"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvVerSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Ver Saldo"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/btSaldo"
+            app:layout_constraintStart_toStartOf="@+id/btSaldo"
+            app:layout_constraintTop_toBottomOf="@+id/btSaldo" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivIconeApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvNomeAplicacao"
+        app:layout_constraintStart_toStartOf="@+id/tvNomeAplicacao"
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeAplicacao"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/tvNomeAplicacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:allowUndo="false"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#00796B"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="MyMoney"
+        android:textAllCaps="false"
+        android:textColor="#353131"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

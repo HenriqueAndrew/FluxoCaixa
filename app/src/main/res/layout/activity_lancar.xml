@@ -1,0 +1,139 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LancarActivity">
+
+
+    <ImageView
+        android:id="@+id/ivValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/tvDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/spDetalhe"
+        app:srcCompat="@drawable/ic_valor" />
+
+    <TextView
+        android:id="@+id/tvOperacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Operação:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetalhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Detalhe:"
+        app:layout_constraintStart_toStartOf="@+id/tvOperacao"
+        app:layout_constraintTop_toBottomOf="@+id/spOperacao" />
+
+    <ImageView
+        android:id="@+id/ivData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="86dp"
+        app:layout_constraintStart_toStartOf="@+id/ivValor"
+        app:layout_constraintTop_toBottomOf="@+id/tilValor"
+        app:srcCompat="@drawable/data_lancamento" />
+
+    <!--
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:minHeight="48dp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="500dp" />
+    -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilValor"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Digite o Valor em R$:"
+        app:layout_constraintBottom_toBottomOf="@+id/ivValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivValor"
+        app:layout_constraintTop_toTopOf="@+id/ivValor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spOperacao"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOperacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOperacao"
+        app:layout_constraintTop_toTopOf="@+id/tvOperacao" />
+
+    <Spinner
+        android:id="@+id/spDetalhe"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDetalhe"
+        app:layout_constraintStart_toStartOf="@+id/spOperacao"
+        app:layout_constraintTop_toTopOf="@+id/tvDetalhe" />
+
+    <DatePicker
+        android:id="@+id/dpDataLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/ivData"
+        app:layout_constraintStart_toStartOf="@+id/tilValor"
+        app:layout_constraintTop_toTopOf="@+id/ivData" />
+
+    <FrameLayout
+        android:id="@+id/fl_Salvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/dpDataLancamento"
+        app:layout_constraintStart_toStartOf="@+id/dpDataLancamento"
+        app:layout_constraintTop_toBottomOf="@+id/dpDataLancamento">
+
+        <ImageButton
+            android:id="@+id/btSalvar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/salvar"
+            android:drawablePadding="250dp"
+            app:layout_constraintEnd_toEndOf="@+id/dpDataLancamento"
+            app:layout_constraintStart_toStartOf="@+id/dpDataLancamento"
+            app:layout_constraintTop_toBottomOf="@+id/dpDataLancamento"
+            app:srcCompat="@drawable/ic_salvar" />
+
+        <TextView
+            android:id="@+id/tvSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Salvar"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
